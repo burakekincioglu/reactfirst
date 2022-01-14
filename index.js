@@ -2,14 +2,17 @@
  * @format
  */
  import React from 'react';
-import {AppRegistry} from 'react-native';
+import {AppRegistry, View} from 'react-native';
 //import App from './App';
 import {name as appName} from './app.json';
 import Header from './src/components/Header';
-
+import Liste from './src/components/Liste';
 
 const App = () => (
-    <Header headerText={'Ornek Proje'}/>
+    <View>
+        <Header headerText={'Ornek Proje'}/>
+        <Liste />
+    </View>
 );
 
 
