@@ -5,20 +5,28 @@ import axios from 'axios'
 
 //servislere bağlanabilmek için class haline getireceğiz
 class Liste extends Component {
-    componentWillMount() {
+    state = {data: [] };
+    UNSAFE_componentWillMount() {
         console.log('componentWillMount');
         axios.get('https://reqres.in/api/users')
-        .then(response => console.log(response));
+        .then(response => this.setState({ data: response.data.data}));
     }
     componentDidMount() {
         console.log('componentDidMount');
     }
 
+    renderData() {
+        return this.state.data.map( responseData => 
+            <Text> {responseData.title} </Text>    
+    );
+    }
+
     render() {
+        console.log('gelen data', this.state);
         console.log('render');
         return (
             <View style={{marginTop: 5}}>
-            <Text> Example Project List</Text>
+                {this.renderData()}
             </View>
         );
     }
