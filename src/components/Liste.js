@@ -3,13 +3,14 @@ import {View, Text} from 'react-native';
 import axios from 'axios'
 
 
-//servislere bağlanabilmek için class haline getireceğiz
-class Liste extends Component {
+//servislere bağlanabilmek için class haline getireceğiz 
+class Liste extends React.Component {
     state = {data: [] };
     UNSAFE_componentWillMount() {
         console.log('componentWillMount');
         axios.get('https://reqres.in/api/users')
-        .then(response => this.setState({ data: response.data.data}));
+        .then(response => { 
+            this.setState({ data: response.data.data})});
     }
     componentDidMount() {
         console.log('componentDidMount');
@@ -17,7 +18,7 @@ class Liste extends Component {
 
     renderData() {
         return this.state.data.map( responseData => 
-            <Text> {responseData.title} </Text>    
+            <Text> {responseData.first_name} </Text>    
     );
     }
 
