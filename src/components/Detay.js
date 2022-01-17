@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 
 const Detay = (props) => {
-    const {ContainerStyle, subContainerStyle} = styles;
+    const {ContainerStyle, subContainerStyle, ImageStyle, titleStyle} = styles;
     return (
         <View style={ContainerStyle}>
         
@@ -11,7 +11,7 @@ const Detay = (props) => {
         </View>
 
         <View style={subContainerStyle}>
-        <Text>{props.data.last_name}</Text>
+        <Image style={ImageStyle} source={{ uri: props.data.avatar}} />
         </View>
 
         <View style={subContainerStyle}>
