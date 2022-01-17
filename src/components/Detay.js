@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
+import Button from './Button';
 
 const Detay = (props) => {
     const {ContainerStyle, subContainerStyle, ImageStyle, titleStyle} = styles;
@@ -15,7 +16,7 @@ const Detay = (props) => {
         </View>
 
         <View style={subContainerStyle}>
-        <Text>{props.data.last_name}</Text>
+        <Button/>
         </View>
 
         </View>
