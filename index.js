@@ -1,7 +1,7 @@
 /**
  * @format
  */
- import React from 'react';
+import React from 'react';
 import {AppRegistry, View} from 'react-native';
 //import App from './App';
 import {name as appName} from './app.json';
@@ -16,5 +16,5 @@ const App = () => (
 );
 
 
-//export default App; // App uygulamasının ucu nerde? en son çağırılma yeri neresi ??
+// App uygulamasının en son çağırılma yeri
 AppRegistry.registerComponent(appName, () => App);

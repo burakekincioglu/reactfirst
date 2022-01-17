@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Image} from 'react-native';
+import {Text, View, Image, Linking} from 'react-native';
 import Button from './Button';
 
 const Detay = (props) => {
@@ -8,7 +8,7 @@ const Detay = (props) => {
         <View style={ContainerStyle}>
         
         <View style={subContainerStyle}>
-        <Text>{props.data.last_name}</Text>
+        <Text style={titleStyle}>{props.data.last_name}</Text>
         </View>
 
         <View style={subContainerStyle}>
@@ -16,7 +16,7 @@ const Detay = (props) => {
         </View>
 
         <View style={subContainerStyle}>
-        <Button/>
+        <Button onPress={()=> Linking.openURL(props.data.avatar)}> Satın Al !! </Button>
         </View>
 
         </View>
