@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-import axios from 'axios'
+import axios from 'axios';
+import Detay from './Detay';
 
 
 //servislere bağlanabilmek için class haline getireceğiz 
@@ -17,8 +18,8 @@ class Liste extends React.Component {
     }
 
     renderData() {
-        return this.state.data.map( responseData => 
-            <Text> {responseData.first_name} </Text>    
+        return this.state.data.map( (responseData, id) => 
+            <Detay key={id} data={responseData}>  </Detay>    
     );
     }
 
