@@ -9,7 +9,7 @@ import Header from './src/components/Header';
 import Liste from './src/components/Liste';
 
 const App = () => (
-    <View>
+    <View style={{ flex: 1 }}>
         <Header headerText={'Ornek Proje'}/>
         <Liste />
     </View>

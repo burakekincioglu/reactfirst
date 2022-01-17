@@ -49,8 +49,7 @@ const styles = {
   },
   ImageStyle: {
     height: 300,
-    flex: 1
-  
+    flex: 1,
   },
   titleStyle: {
     fontSize: 18
